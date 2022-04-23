@@ -8,6 +8,6 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Cardinal-System/src/main/resources/natives"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Django/Documents/Java/lib/Cardinal-Plugin.jar" sourcepath="/Cardinal-Plugin/src"/>
+	<classpathentry kind="lib" path="J:/Java/lib/Cardinal-Plugin.jar" sourcepath="/Cardinal-Plugin/src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
