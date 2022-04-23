@@ -4,6 +4,11 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.argus.cjson.CJSONItem;
+import net.argus.cjson.value.CJSONObject;
+import net.argus.cjson.value.CJSONString;
+import net.argus.emessage.client.ClientResources;
+import net.argus.emessage.client.MainClient;
 import net.argus.emessage.client.gui.GUIClient;
 import net.argus.file.FileLang;
 import net.argus.gui.MenuItem;
@@ -14,13 +19,16 @@ import net.argus.plugin.PluginEvent;
 import net.argus.plugin.PluginFile;
 import net.argus.plugin.annotation.PluginInfo;
 
-@PluginInfo(pluginId = MainPlugin.PLUGIN_ID, name = MainPlugin.NAME, authors = {MainPlugin.AUTHOR}, description = MainPlugin.DESCRIPTION, version = MainPlugin.VERSION)
+@PluginInfo(pluginId = MainPlugin.PLUGIN_ID, name = MainPlugin.NAME, pluginRequested = {MainPlugin.REQUESTED},
+authors = {MainPlugin.AUTHOR}, description = MainPlugin.DESCRIPTION, version = MainPlugin.VERSION)
 public class MainPlugin extends Plugin {
 	
 	public static final String PLUGIN_ID = "emessage-client";
 	public static final String NAME = "eMessage";
 	public static final String AUTHOR = "Argus";
-	public static final String VERSION = "1.0";
+	public static final String VERSION = "1.1";
+	
+	public static final String REQUESTED = "";
 	
 	public static final String DESCRIPTION = "eMessage official client plugin.";
 	
@@ -36,7 +44,14 @@ public class MainPlugin extends Plugin {
 	}
 
 	@Override
-	public void init(PluginEvent e) {}
+	public void init(PluginEvent e) {
+		CJSONObject pluginMain = new CJSONObject();
+		pluginMain.addItem("pluginsettings", new CJSONString("emessage-client@1"));
+		
+		ClientResources.TREE_CONFIG.addItem(new CJSONItem("pluginclient", pluginMain));
+		
+		new PluginSettingsConfig();
+	}
 
 	@Override
 	public void postInit(PluginEvent e) {
@@ -44,6 +59,8 @@ public class MainPlugin extends Plugin {
 		pluginMenuItem.addActionListener(getPluginActionListener());
 		
 		GUIClient.MENU_BAR.getHelp().add(pluginMenuItem);
+		
+		MainClient.addChatListener(new PluginClientListener());
 	}
 	
 	@Override
