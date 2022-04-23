@@ -26,7 +26,7 @@ public class MainPlugin extends Plugin {
 	public static final String PLUGIN_ID = "emessage-client";
 	public static final String NAME = "eMessage";
 	public static final String AUTHOR = "Argus";
-	public static final String VERSION = "1.1b";
+	public static final String VERSION = "1.1";
 	
 	public static final String REQUESTED = "";
 	

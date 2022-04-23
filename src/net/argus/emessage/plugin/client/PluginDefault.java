@@ -1,11 +1,11 @@
 package net.argus.emessage.plugin.client;
 
-import net.argus.emessage.ChatDefault;
+import net.argus.emessage.EMessageDefault;
 
 public class PluginDefault {
 	
 	public static boolean notifyAccept() {
-		return ChatDefault.isTrue("notify.accept", "true");
+		return EMessageDefault.isTrue("notify.accept", "true");
 	}
 
 }
