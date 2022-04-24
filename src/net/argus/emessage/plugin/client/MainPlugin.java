@@ -26,7 +26,7 @@ public class MainPlugin extends Plugin {
 	public static final String PLUGIN_ID = "emessage-client";
 	public static final String NAME = "eMessage";
 	public static final String AUTHOR = "Argus";
-	public static final String VERSION = "1.1.1";
+	public static final String VERSION = "1.1.2";
 	
 	public static final String REQUESTED = "";
 	
@@ -39,6 +39,7 @@ public class MainPlugin extends Plugin {
 		Lang.addLang(LangType.en_US, new FileLang("en_US", "lang"));
 		Lang.addLang(LangType.fr_FR, new FileLang("fr_FR", "lang"));
 		Lang.addLang(LangType.ja_JP, new FileLang("ja_JP", "lang"));
+		Lang.addLang(LangType.es_ES, new FileLang("es_ES", "lang"));
 		
 		dialog = new PluginDialog();
 	}
@@ -69,6 +70,7 @@ public class MainPlugin extends Plugin {
 		files.add(PluginResources.en_US);
 		files.add(PluginResources.fr_FR);
 		files.add(PluginResources.ja_JP);
+		files.add(PluginResources.es_ES);
 		return files;
 	}
 	
