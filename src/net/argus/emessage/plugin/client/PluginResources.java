@@ -28,6 +28,13 @@ public class PluginResources {
 			"checkbox.notifyshow.name=ウィンドウが選択されていないときに通知を表示する\n" +
 			"");
 	
+	public static final PluginFile es_ES = getPluginFile("es_ES", "lang", "lang", true,
+			"menuitem.plugin.name=Complemento\n" + 
+			"tree.pluginclient.name=Complemento de cliente\n" +
+			"tree.pluginsettings.name=Configuraciones\n" +
+			"checkbox.notifyshow.name=Mostrar notificaciones cuando la ventana no está seleccionada\n" +
+			"");
+	
 	
 	public static PluginFile getPluginFile(String fileName, String suff, String path, boolean overwritable, String lines) {
 		return new PluginFile(fileName, suff, path, overwritable) {
