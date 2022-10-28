@@ -5,5 +5,7 @@
 	<classpathentry kind="lib" path="/eMessage/bin"/>
 	<classpathentry kind="lib" path="/eMessage/lib/Cardinal-Plugin.jar"/>
 	<classpathentry kind="lib" path="/eMessage/lib/Cardinal-System.jar"/>
+	<classpathentry kind="lib" path="/eMessage/lib/eMessageAPI.jar"/>
+	<classpathentry kind="lib" path="/eMessage/lib/eMessageUI.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
