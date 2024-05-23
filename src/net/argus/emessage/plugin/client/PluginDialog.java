@@ -32,7 +32,7 @@ public class PluginDialog extends DialogComponent {
 		setTitle("Plugin");
 		
 		setIcon(ClientResources.ICON.getImage());
-		setDialogIcon(ClientResources.ICON.getImage());
+		//setDialogIcon(ClientResources.ICON.getImage());
 		
 		setSize(530, 430);
 		setLocationRelativeTo(GUIClient.FRAME);
